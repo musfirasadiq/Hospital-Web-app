@@ -1,0 +1,30 @@
+<div *ngIf="loading" class="text-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="!loading && !errorMessage && departments.length === 0">
+  <p>No departments available at the moment.</p>
+</div>
+
+<div *ngIf="!loading && !errorMessage">
+  <h2 class="text-center mb-4 text-gradient">Departments</h2>
+  <div class="row">
+    <div *ngFor="let department of departments" class="col-md-4 mb-4">
+      <div class="card h-100 shadow-lg border-0 rounded-lg" style="background: linear-gradient(135deg, #6c63ff, #00c6ff); transition: transform 0.4s ease;">
+        <div class="card-body p-4 text-white">
+          <h5 class="card-title">{{ department.name }}</h5>
+          <p class="card-text">{{ department.description || 'No description available' }}</p>
+        </div>
+        <div class="card-footer text-center p-3" style="background-color: rgba(255, 255, 255, 0.2);">
+          <!-- Add any footer content here if needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

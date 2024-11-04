@@ -1,0 +1,20 @@
+<div class="dashboard-container">
+    <div class="logout-container">
+      <button (click)="onLogout()" class="btn btn-logout">Logout</button> <!-- Stylish Logout button -->
+    </div>
+  
+    <h2 class="dashboard-title">Admin Dashboard</h2>
+  
+    <nav class="dashboard-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a routerLink="patients" class="nav-link">Patient Management</a></li>
+        <li class="nav-item"><a routerLink="doctors" class="nav-link">Doctor Management</a></li>
+        <li class="nav-item"><a routerLink="appointments" class="nav-link">Appointment Management</a></li>
+        <li class="nav-item"><a routerLink="manage_department"class="nav-link" >Department Management</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Outlet for child routes -->
+    <router-outlet></router-outlet>
+  </div>
+  

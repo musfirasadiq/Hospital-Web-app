@@ -1,0 +1,16 @@
+.about-section {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 40px; /* Space inside the section */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.about-section h1, .about-section h2 {
+    color: #007bff; /* Blue color for headings */
+}
+
+.about-section p {
+    font-size: 18px; /* Font size for paragraphs */
+    line-height: 1.6; /* Spacing between lines */
+    color: #333; /* Darker text color for better readability */
+}

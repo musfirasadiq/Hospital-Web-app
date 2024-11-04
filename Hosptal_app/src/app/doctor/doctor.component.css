@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Navbar */
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+  /* Card Styles */
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Header */
+  .card-header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* Form Styles */
+  .form-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: 5px;
+  }
+  
+  /* List Group Item */
+  .list-group-item {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .list-group-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Doctor Info */
+  .doctor-info {
+    flex-grow: 1;
+  }
+  
+  .doctor-info h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .doctor-info p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Buttons in List */
+  .btn-info {
+    background-color: #17a2b8; /* Bootstrap info color */
+    border-color: #17a2b8;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Bootstrap danger color */
+    border-color: #dc3545;
+  }
+  
+  /* Font Awesome Icon */
+  .fa-user-md {
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .doctor-info h5 {
+      font-size: 1rem;
+    }
+  
+    .doctor-info p {
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,193 @@
+/* Jumbotron Styling */
+.jumbotron {
+    background-image: url('/assets/images/img4.jpg'); /* Set the image here */
+    background-size: cover; /* Cover the entire jumbotron */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 5rem 2rem; /* Adjusted padding for better spacing */
+    color: white; /* Text color */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Darker shadow for better readability */
+    border-radius: 10px; /* Rounded corners */
+    position: relative; /* For absolute positioning of pseudo-elements */
+    overflow: hidden; /* Prevent overflow */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items */
+    justify-content: center; /* Center items */
+}
+
+/* Gradient Overlay for Better Readability */
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+    z-index: 1; /* Behind the text */
+}
+
+/* Heading Styling */
+.jumbotron h1 {
+    font-family: 'Poppins', sans-serif; /* Stylish font for the title */
+    font-weight: 700; /* Bold weight */
+    font-size: 3.5rem; /* Larger font size */
+    letter-spacing: 2px; /* Spacing between letters */
+    text-transform: uppercase; /* Uppercase for style */
+    margin-bottom: 1rem; /* Space below */
+    position: relative; /* For positioning pseudo-elements */
+    z-index: 2; /* Above overlay */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.jumbotron h1:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Lead Paragraph Styling */
+.jumbotron p.lead {
+    font-family: 'Arial', sans-serif; /* Clean font for the description */
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 1.5rem; /* Space below */
+    z-index: 2; /* Above overlay */
+}
+
+/* Button Styling */
+.jumbotron .btn {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* Remove border */
+    padding: 1rem 2rem; /* Button padding */
+    font-size: 1.2rem; /* Button font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Button transitions */
+    border-radius: 30px; /* Rounded button corners */
+    position: relative; /* For positioning */
+    z-index: 2; /* Above overlay */
+}
+
+.jumbotron .btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .jumbotron p.lead {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .jumbotron {
+        padding: 4rem 1rem; /* Less padding on smaller screens */
+    }
+}
+
+
+/* Row Styling */
+.row {
+    padding: 2rem 0; /* Optional: add some padding for the row below the jumbotron */
+}
+
+/* Font Awesome Icon Styling */
+.fa {
+    color: #007bff; /* Icon color */
+    margin-bottom: 10px; /* Space below icons */
+}
+
+/* Card Styling */
+.card {
+    border: none; /* Remove card border */
+    text-align: center; /* Center text in cards */
+    border-radius: 8px; /* Rounded corners for cards */
+    overflow: hidden; /* Ensures no overflow of content */
+    transition: transform 0.2s; /* Smooth scale transition */
+    min-height: 250px; /* Set minimum height for the card */
+    max-height: 350px; /* Set a maximum height for uniformity */
+    width: 100%; /* Ensures full width in the grid */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+}
+
+/* Card Body Styling */
+.card-body {
+    padding: 1.5rem; /* Adjust card body padding */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Ensure body takes full height of the card */
+}
+
+/* Card Title Styling */
+.card-title {
+    font-size: 1.5rem; /* Increase font size for the title */
+    font-family: 'Roboto', sans-serif; /* Stylish font for the title */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #333; /* Dark gray color for better readability */
+    margin-top: 10px; /* Space above the title */
+    text-transform: uppercase; /* Uppercase letters for style */
+    letter-spacing: 1px; /* Spacing between letters for a modern look */
+}
+
+/* Card Text Styling */
+.card-text {
+    font-size: 1rem; /* Font size for the description */
+    color: #555; /* Lighter gray for the description */
+    line-height: 1.5; /* Improved line height for readability */
+    font-family: 'Arial', sans-serif; /* Change font for the description */
+    margin-top: 10px; /* Space above the description */
+}
+
+/* Service Card Styling */
+.service-card {
+    background-size: cover; /* Cover the entire card body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Change text color for contrast */
+    padding: 1.5rem; /* Adjust padding */
+    border-radius: 8px; /* Optional: rounded corners for the card body */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Optional: smooth transition for hover effect */
+}
+
+/* Specific Background Images for Each Service Card */
+.emergency {
+    background-image: url('/assets/images/emergency.jpg'); /* Path to your emergency services background image */
+}
+
+.doctors {
+    background-image: url('/assets/images/doctor.jpg'); /* Path to your expert doctors background image */
+}
+
+.facilities {
+    background-image: url('/assets/images/facility.jpg'); /* Path to your advanced facilities background image */
+}
+
+/* Service Card Hover Effect */
+.service-card:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.3rem; /* Slightly smaller title on mobile */
+    }
+    
+    .card-text {
+        font-size: 0.9rem; /* Slightly smaller description on mobile */
+    }
+
+    .jumbotron {
+        padding: 3rem 1rem; /* Less padding on smaller screens */
+    }
+
+    .display-4 {
+        font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .lead {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    }
+}

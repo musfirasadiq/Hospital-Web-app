@@ -1,0 +1,55 @@
+.card {
+    background: linear-gradient(135deg, #6c63ff, #00c6ff); /* Color gradient */
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .text-gradient {
+    background: -webkit-linear-gradient(45deg, #ff6f91, #ff9671);
+    -webkit-background-clip: text;   /* For Chrome, Safari */
+    -moz-background-clip: text;      /* For Firefox (older versions, optional) */
+    -o-background-clip: text;        /* For Opera (older versions, optional) */
+    background-clip: text;           /* Standard */
+    -webkit-text-fill-color: transparent; /* Required for the text to be transparent on webkit browsers */
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .text-primary {
+    color: #00c6ff !important; /* Use the accent color */
+  }
+  
+  .card-footer {
+    border-top: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  h2.text-gradient {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+  }
+  

@@ -1,0 +1,44 @@
+.patient-form {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .patient-list {
+    margin-top: 20px;
+  }
+  
+  .patient-card {
+    margin-bottom: 15px;
+  }
+  
+  .patient-card .card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .patient-card .card:hover {
+    transform: scale(1.02);
+  }
+  

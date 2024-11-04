@@ -1,0 +1,87 @@
+/* Contact Section Styling */
+.contact-section {
+    background: linear-gradient(to right, #f8f9fa, #ffffff); /* Gradient background for depth */
+    padding: 40px 20px; /* Padding for spacing */
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+/* Section Heading */
+.contact-section h2 {
+    color: #007bff; /* Heading color */
+    text-align: center; /* Centered heading */
+    font-size: 2.5rem; /* Larger heading */
+    margin-bottom: 30px; /* Space below heading */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Subheading Styling */
+.contact-section h3 {
+    color: #333; /* Dark gray for subheadings */
+    margin-bottom: 15px; /* Space below subheading */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Responsive Row */
+.row {
+    display: flex; /* Flexbox for responsive layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin: 0 -10px; /* Remove horizontal margin from columns */
+}
+
+/* Column Styling */
+.col-md-6 {
+    padding: 10px; /* Adjusted padding for better alignment */
+    flex: 1; /* Allow columns to take equal space */
+    min-width: 300px; /* Minimum width for responsiveness */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+/* Input and Textarea Styling */
+.form-control {
+    border-radius: 5px; /* More pronounced rounded corners */
+    border: 1px solid #ced4da; /* Border color */
+    padding: 12px; /* Padding inside inputs */
+    transition: all 0.3s ease; /* Smooth transition */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Focus Effect */
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow for focus effect */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff; /* Button color */
+    border: none; /* No border */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    font-weight: 600; /* Bold text for better visibility */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px; /* Adjusted padding for mobile */
+    }
+
+    .contact-section h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+}

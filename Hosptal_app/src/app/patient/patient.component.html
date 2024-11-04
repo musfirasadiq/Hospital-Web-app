@@ -1,0 +1,64 @@
+<div class="patient-form">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h2 *ngIf="!isEditing">Add New Patient</h2>
+        <h2 *ngIf="isEditing">Edit Patient</h2>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="isEditing ? updatePatient() : addPatient()">
+          <div class="mb-3">
+            <label for="patientName" class="form-label">Name *</label>
+            <input type="text" id="patientName" class="form-control" [(ngModel)]="patientName" name="patientName" required placeholder="Patient's Name" />
+          </div>
+          
+          <div class="mb-3">
+            <label for="patientAge" class="form-label">Age *</label>
+            <input type="number" id="patientAge" class="form-control" [(ngModel)]="patientAge" name="patientAge" required placeholder="Patient's Age" />
+          </div>
+  
+          <div class="mb-3">
+            <label for="patientGender" class="form-label">Gender *</label>
+            <select id="patientGender" class="form-select" [(ngModel)]="patientGender" name="patientGender" required>
+              <option value="" disabled>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">
+            {{ isEditing ? 'Update' : 'Add' }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="patient-list">
+    <div class="card">
+      <div class="card-header">
+        <h3>Patients ({{ patients.length }})</h3>
+      </div>
+      <div class="card-body">
+        <div *ngIf="patients.length === 0">No patients available.</div>
+        <div *ngFor="let patient of patients" class="patient-card mb-3">
+          <div class="card">
+            <div class="card-body">
+              <p><strong>Name:</strong> {{ patient.name }}</p>
+              <p><strong>Age:</strong> {{ patient.age }}</p>
+              <p><strong>Gender:</strong> {{ patient.gender }}</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-info" (click)="editPatient(patient)">
+                Edit
+              </button>
+              <button class="btn btn-danger" (click)="deletePatient(patient)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

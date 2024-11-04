@@ -1,0 +1,58 @@
+<section class="container my-5">
+  <h2 class="text-center mb-4">Manage Departments</h2>
+
+  <!-- Add/Edit Department Form -->
+  <div class="card shadow-sm mb-4 rounded">
+    <div class="card-body">
+      <h3 class="card-title">{{ newDepartment._id ? 'Edit Department' : 'Add New Department' }}</h3>
+      <form (ngSubmit)="onAddOrUpdateDepartment()">
+        <div class="mb-3">
+          <label for="departmentName" class="form-label">Department Name</label>
+          <input
+            type="text"
+            id="departmentName"
+            [(ngModel)]="newDepartment.name"
+            name="departmentName"
+            class="form-control"
+            placeholder="Enter department name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="departmentDescription" class="form-label">Description</label>
+          <textarea
+            id="departmentDescription"
+            [(ngModel)]="newDepartment.description"
+            name="departmentDescription"
+            class="form-control"
+            placeholder="Enter department description"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">
+          {{ newDepartment._id ? 'Update Department' : 'Add Department' }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Department List -->
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let department of departments">
+      <div class="card shadow-sm rounded">
+        <div class="card-body">
+          <h5 class="card-title">{{ department.name }}</h5>
+          <p class="card-text">{{ department.description || 'No description available' }}</p> <!-- Displaying description -->
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-primary" (click)="onEditDepartment(department)">
+              Edit
+            </button>
+            <button class="btn btn-outline-danger" (click)="onDeleteDepartment(department)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

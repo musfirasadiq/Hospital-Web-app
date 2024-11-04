@@ -1,0 +1,95 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Default font for the body */
+    margin: 0; /* Remove default margin */
+    background-color: #f2f2f2; /* Light gray background for the body */
+    color: #333; /* Default text color */
+}
+
+/* Styling for the Header and Navigation */
+header {
+    background-color: #0056b3; /* Darker blue background */
+    padding: 15px 30px; /* Increased padding for better spacing */
+    color: white;
+    text-align: center;
+    position: sticky; /* Makes navbar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it’s above other content */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center items */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Spacing between navigation items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500; /* Medium font weight for better readability */
+    padding: 8px 15px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover */
+}
+
+header nav ul li a:hover {
+    background-color: #ffc107; /* Bright yellow background on hover */
+    color: #0056b3; /* Change text color on hover */
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    min-height: 100vh; /* Ensures the content area takes up full vertical space */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Section Styling */
+section {
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff; /* Match the header */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 3px solid #ffc107; /* Distinctive border for footer */
+}
+
+footer p {
+    margin: 0; /* Remove margin for better alignment */
+    color: white; /* Footer text color */
+    font-size: 14px; /* Smaller footer text size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
+    }
+    
+    header nav ul li {
+        margin: 10px 0; /* Space between items */
+    }
+    
+    header nav ul li a {
+        font-size: 16px; /* Slightly smaller font on mobile */
+    }
+}

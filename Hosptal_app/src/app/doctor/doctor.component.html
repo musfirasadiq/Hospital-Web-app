@@ -1,0 +1,94 @@
+<!-- Toolbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-brand text-white">Doctors Management</span>
+  </div>
+</nav>
+
+<!-- Loading State -->
+<div *ngIf="isLoading" class="alert alert-info" role="alert">
+  Loading doctors, please wait...
+</div>
+
+<!-- Add/Edit Doctor Form -->
+<div class="card my-3">
+  <div class="card-header">
+    {{ editingDoctor ? 'Edit Doctor' : 'Add New Doctor' }}
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="addOrUpdateDoctor()" #doctorForm="ngForm">
+      <div *ngIf="formError" class="alert alert-danger" role="alert">
+        {{ formError }}
+      </div>
+      <div *ngIf="successMessage" class="alert alert-success" role="alert">
+        {{ successMessage }}
+      </div>
+
+      <div class="mb-3">
+        <label for="doctorName" class="form-label">Name *</label>
+        <input 
+          type="text" 
+          id="doctorName" 
+          [(ngModel)]="doctorName" 
+          name="doctorName" 
+          required 
+          class="form-control" 
+          placeholder="Doctor's Name" 
+          #doctorNameInput="ngModel"
+        />
+        <div *ngIf="doctorNameInput.invalid && doctorNameInput.touched" class="text-danger">
+          Doctor's name is required.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="department" class="form-label">Department *</label>
+        <select 
+          id="department" 
+          [(ngModel)]="selectedDepartment" 
+          name="department" 
+          required 
+          class="form-select" 
+          #departmentInput="ngModel"
+        >
+          <option value="" disabled>Select Department</option>
+          <option *ngFor="let department of departments" [value]="department._id">{{ department.name }}</option>
+        </select>
+        <div *ngIf="departmentInput.invalid && departmentInput.touched" class="text-danger">
+          Please select a department.
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary" [disabled]="doctorForm.invalid">
+          {{ editingDoctor ? 'Update' : 'Add' }}
+        </button>
+        <button type="button" class="btn btn-danger" (click)="resetForm()" *ngIf="editingDoctor">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Doctors List -->
+<div class="card my-3">
+  <div class="card-header">
+    Doctors List ({{ doctors.length }})
+  </div>
+  <div class="card-body">
+    <div class="list-group">
+      <div class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let doctor of doctors">
+        <div class="doctor-info d-flex align-items-center">
+          <i class="fas fa-user-md fa-2x me-3"></i>
+          <div>
+            <h5 class="mb-1 text-truncate">{{ doctor?.name }}</h5>
+            <p class="mb-0">{{ doctor.department.name }}</p>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-info btn-sm me-2" (click)="editDoctor(doctor)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteDoctor(doctor)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

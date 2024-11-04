@@ -1,0 +1,61 @@
+.appointment-form-card,
+.appointment-list-card {
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 800px; /* Adjust for desired width */
+    margin: auto; /* Center the card */
+}
+
+.appointment-form-card:hover,
+.appointment-list-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.card-header {
+    padding: 20px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+    font-size: 1.1rem; /* Increase font size */
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary, .btn-danger {
+    padding: 10px 20px; /* Increase padding */
+    font-size: 1.1rem; /* Increase font size */
+    border-radius: 8px; /* Rounded buttons */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    transform: translateY(-2px);
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-2px);
+}
+
+.text-danger {
+    font-size: 1rem; /* Increase font size */
+}
+
+.alert {
+    border-radius: 8px;
+    font-size: 1.1rem; /* Increase font size */
+}

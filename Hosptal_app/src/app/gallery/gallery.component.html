@@ -1,0 +1,11 @@
+<h2 class="text-center mb-4">Our Gallery</h2>
+<div class="row gallery-row">
+  <div class="col-md-4 col-sm-6 mb-4" *ngFor="let image of galleryImages">
+    <div class="gallery-item">
+      <img [src]="image.url" class="img-fluid gallery-img" alt="Gallery image" />
+      <div class="gallery-overlay">
+        <div class="overlay-text">View Image</div>
+      </div>
+    </div>
+  </div>
+</div>

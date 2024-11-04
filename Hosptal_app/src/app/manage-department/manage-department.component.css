@@ -1,0 +1,61 @@
+body {
+    background-color: #f4f4f9; /* Light background for a modern feel */
+    font-family: 'Roboto', sans-serif; /* Use Roboto for body text */
+  }
+  
+  h2 {
+    font-weight: 700; /* Bold for emphasis */
+    color: #333; /* Darker text for better readability */
+    font-size: 2rem; /* Increase size for headings */
+    margin-bottom: 1rem; /* Space below heading */
+  }
+  
+  .card {
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Smooth rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+  }
+  
+  .card:hover {
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+  }
+  
+  .btn {
+    border-radius: 5px; /* Slightly rounded buttons */
+    transition: background-color 0.2s, color 0.2s; /* Smooth color transition */
+    font-family: 'Lato', sans-serif; /* Use Lato for buttons */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Blue background for the add button */
+    border-color: #007bff; /* Match border color */
+  }
+  
+  .btn-outline-primary, .btn-outline-danger {
+    border-color: #007bff; /* Border color for outline buttons */
+    color: #007bff; /* Text color for outline buttons */
+    transition: background-color 0.2s; /* Transition for background on hover */
+  }
+  
+  .btn-outline-primary:hover, .btn-outline-danger:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+  }
+  
+  .department-card {
+    background-color: #fff; /* White background for department cards */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .card-title {
+    color: #333; /* Dark title color */
+    font-weight: 500; /* Medium weight for card titles */
+    font-size: 1.5rem; /* Increase title size */
+  }
+  
+  .card-text {
+    color: #666; /* Gray for description text */
+    font-size: 1rem; /* Standard size for text */
+    line-height: 1.5; /* Increase line height for readability */
+  }
+  

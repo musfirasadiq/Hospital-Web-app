@@ -1,0 +1,70 @@
+.dashboard-container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the logout button */
+  }
+  
+  .logout-container {
+    position: absolute; /* Position the button at the top right */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+  }
+  
+  .btn-logout {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+  }
+  
+  .btn-logout:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+  }
+  
+  .dashboard-title {
+    font-size: 2em;
+    margin: 60px 0 20px; /* Adjust top margin for space below the button */
+    color: #343a40; /* Dark color for title */
+    text-align: center;
+  }
+  
+  .dashboard-nav {
+    margin-bottom: 20px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+  }
+  
+  .nav-item {
+    margin: 0 15px; /* Space between items */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff; /* Primary color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: white; /* Change text color on hover */
+  }
+  
+  router-outlet {
+    margin-top: 20px; /* Space above the child routes */
+  }
+  
